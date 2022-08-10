@@ -300,6 +300,23 @@
 
 <!-- Toolbar -->
 
+<!-- <mat-slider min="1" max="100" step="1" value="50"></mat-slider> -->
+<mat-toolbar color="primary">
+  <h1><span class="light">Company</span>INC</h1>
+  <span class="spacer"></span>
+  <a md-button
+  [routerLink]="['home']"
+  routerLinkActive="active">HOME</a>
+  <a md-button
+  [routerLink]="['about']"
+  routerLinkActive="active">ABOUT US</a>
+  <a md-button
+  [routerLink]="['contact']"
+  routerLinkActive="active">OUR CUSTOMERS</a>
+  <a md-button
+  [routerLink]="['contact']"
+  routerLinkActive="active">OUR SERVICES</a>
+</mat-toolbar>
 <div>
   <p>Today is {{today | date:'medium'}}</p>
   <p>Current Toronto temperature is {{weather}}</p>
