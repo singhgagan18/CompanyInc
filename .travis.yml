@@ -1,0 +1,28 @@
+language: node_js
+
+node_js:
+   - node
+
+branches:
+   only:
+      - master # will only build for master branch commits
+
+before_script:
+   - npm install -g --silent firebase-tools # installs firebase to run firebase deploy
+   - npm install -g --silent @angular/cli
+
+script:
+   - ng build --prod
+
+after_success:
+  - firebase deploy --token $FIREBASE_TOKEN --non-interactive # firebase deploy after angular-cli build
+
+notifications:
+  recipients:
+      - sanya.dassani@gmail.com
+      - jotvirk322@gmail.com
+      - henilpatel5498@gmail.com
+      - singhgagan988@gmail.com
+      - Ali.Nouhi@cestarcollege.com
+    on_success: always # default: change
+    on_failure: always # default: always
