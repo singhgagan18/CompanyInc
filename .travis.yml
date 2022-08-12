@@ -8,7 +8,7 @@ branches:
       - master # will only build for master branch commits
 
 before_script:
-   - npm install -g --silent firebase-tools # installs firebase to run firebase deploy
+   - npm install -g --silent firebase-tools@8.20.0 # installs firebase to run firebase deploy
    - npm install -g --silent @angular/cli
 
 script:
