@@ -9,7 +9,7 @@ import { ContentService } from '../../services/content.service';
 })
 export class PageComponent implements OnInit {
 
-  page:Object = {
+  page = {
     title: 'Home',
     subtitle: 'Welcome Home!',
     content: 'Some home content.'
