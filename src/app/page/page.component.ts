@@ -9,7 +9,7 @@ import { ContentService } from '../../services/content.service';
 })
 export class PageComponent implements OnInit {
 
-  page = {
+  page:Object = {
     title: 'Home',
     subtitle: 'Welcome Home!',
     content: 'Some home content.'
@@ -26,6 +26,6 @@ export class PageComponent implements OnInit {
 
   ngOnInit() {
     const pageData = this.route.snapshot.data['page'];
-    this.page = this.contentService.pages[pageData];
+    this.page = this.contentService.pages[pageData ?? 'home'];
   }
 }

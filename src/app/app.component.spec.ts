@@ -1,16 +1,27 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import {WeatherService} from '../services/weather.service';
+import { ContentService } from 'src/services/content.service';
+import { HttpClient } from '@angular/common/http';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import {HttpClientModule} from '@angular/common/http';
+
 
 describe('AppComponent', () => {
+
+  let mockWeatherService:WeatherService;
+   
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        HttpClientTestingModule
       ],
       declarations: [
         AppComponent
       ],
+      providers: [WeatherService, ContentService, HttpClient]
     }).compileComponents();
   });
 
@@ -30,6 +41,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('CompanyInc app is running!');
+    expect(compiled.querySelector('#title').textContent).toContain('CompanyINC');
   });
 });
