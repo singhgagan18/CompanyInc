@@ -1,3 +1,12 @@
+# URL to the directory where Angular project source code resides
+
+https://github.com/singhgagan18/CompanyInc/tree/master/src
+
+# URL of your deployed Angular app
+
+https://companyinc-bots.web.app/ourServices
+
+
 # CompanyInc
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.4.
